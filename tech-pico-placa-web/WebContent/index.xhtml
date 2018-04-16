@@ -1,0 +1,48 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      template="./resources/templates/template.xhtml"
+      xmlns:te="http://java.sun.com/jsf/composite/components"
+      xmlns:p="http://primefaces.org/ui"> 
+
+	<ui:define name="windowTitle">
+		Ingresar
+	</ui:define>
+	<ui:define name="headerMenu">
+	<!--  <te:menuNavigationComponent></te:menuNavigationComponent> -->
+	</ui:define>
+	
+	<ui:define name="contentHeader">
+		
+	</ui:define>
+	
+	<ui:define name="content">
+		 <!-- <te:loginInputComponent></te:loginInputComponent> -->
+		 <p:panel  header="Consulta pico y placa" style="margin-bottom:20px">
+		<h:panelGrid columns="2" cellpadding="5" cellspacing="0">
+
+				<h:outputLabel value="Numero placa:"/>
+				<p:inputText  id="itxPla" value="#{pickPlateBackBean.plate}" required="true" />
+				
+				<h:outputLabel value="Dia:" />
+        		<p:calendar id="day" value="#{pickPlateBackBean.day}" effect="fold" />
+				
+				<h:outputLabel value="Hora:" />
+				<p:calendar id="time" value="#{pickPlateBackBean.hour}" pattern="HH:mm" timeOnly="true"  />
+          		<p:spacer height="10" />
+               
+               <!-- <h:outputLabel value=" "/> -->
+               <f:facet name="footer">
+                   <h:panelGroup >
+                       <p:commandButton value="Comprobar" actionListener="#{pickPlateBackBean.click}" icon="ui-icon-check" />
+                   </h:panelGroup>
+                   
+               </f:facet>
+		</h:panelGrid>	
+		</p:panel>
+		 
+	<!-- <h:commandButton  value="Ingresar"  id="Btingresar" title="Ingresar" action="/pages/welcome" /> -->	 
+	</ui:define>
+
+</ui:composition>
