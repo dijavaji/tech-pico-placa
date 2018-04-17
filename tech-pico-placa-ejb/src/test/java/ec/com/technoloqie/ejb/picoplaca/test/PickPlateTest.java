@@ -65,6 +65,9 @@ public class PickPlateTest {
 		}
 	}
 	
+	/**
+	 * Utilizado para test de validacion de pico y placa
+	 */
 	@Test
 	public void testPickLicensePlate(){
 		String enrollmentId = "POG-0342";
@@ -78,7 +81,7 @@ public class PickPlateTest {
 		try {
 			date = format.parse(dateStart);
 			hour = format.parse(dateStop);
-			ValidationTimeUtil.getInstance().validatePickLicensePlate(enrollmentId, date, hour);
+			ValidationTimeUtil.getInstance().validatePickLicensePlate(enrollmentId, date);
 		} catch (Exception e) {
 			PicoPlacaLog.error("Error en el testPickLicensePlate ", e);
 		}

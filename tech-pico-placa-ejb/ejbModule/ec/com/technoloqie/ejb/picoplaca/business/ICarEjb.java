@@ -4,6 +4,7 @@ import javax.ejb.Local;
 
 import ec.com.technoloqie.ejb.picoplaca.commons.exception.PicoPlacaException;
 import ec.com.technoloqie.ejb.picoplaca.dto.CarDTO;
+import ec.com.technoloqie.ejb.picoplaca.dto.ScheduleDTO;
 
 /**
  * 
@@ -20,4 +21,12 @@ public interface ICarEjb {
 	 */
 	void createCar(CarDTO car) throws PicoPlacaException;
 	
+	/**
+	 * Utilizado para validar el pico y placa.
+	 * @param car
+	 * @param restrictSchedule
+	 * @return
+	 * @throws PicoPlacaException
+	 */
+	Boolean validatePickLicensePlate(CarDTO car, ScheduleDTO restrictSchedule) throws PicoPlacaException;
 }

@@ -41,10 +41,9 @@ public class ValidationTimeUtil {
 	 * Utilizado para poder validar el pico y placa de un automovil. 
 	 * @param enrollmentId numero de placa
 	 * @param date fecha
-	 * @param hour hora 
 	 * @return
 	 */
-	public Boolean validatePickLicensePlate(String enrollmentId, Date date, Date hour) throws PicoPlacaException{
+	public Boolean validatePickLicensePlate(String enrollmentId, Date date) throws PicoPlacaException{
 		Boolean valid = Boolean.FALSE;
 		Calendar calendar = GregorianCalendar.getInstance(); 
 		calendar.setTime(date);    

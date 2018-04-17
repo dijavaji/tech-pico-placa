@@ -14,7 +14,7 @@
 	
 	<dependencies>
 		<dependency>
-			<groupId>ec.com.tech.pico.placa</groupId>
+			<groupId>ec.com.technoloqie.pico.placa</groupId>
 			<artifactId>tech-pico-placa-ejb</artifactId>
 			<version>${project.version}</version>
 		</dependency>
